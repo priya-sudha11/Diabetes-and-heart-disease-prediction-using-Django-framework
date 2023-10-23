@@ -1,0 +1,111 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Predict</title>
+    <style>
+        body{
+        background-image:url("{% static 'DiabetesPrediction/images/diabetes.jpg'%}");
+        background-repeat:no-repeat;
+        background-attachment:fixed;
+        background-size:1370px 670px;
+        }
+        .main{
+
+            top:140px;
+            left:310px;
+            width:400px;
+            border-radius:10px;
+            align-items:center;
+            padding:5%;
+        }
+        hi{
+            color:black;
+            font-size:30px;
+            font-weight:bold;
+           }
+        input[type=submit]{
+            background-color:#2a41c7;
+            border:2px;
+            color:white;
+            padding:8px 16px;
+            cursor:pointer;
+            margin-top:15px;
+            border-radius:10px;
+            }
+        input:invalid:required{
+            border:2px dashed red;
+            }
+        .btn-home{
+            background-color:#2a41c7;
+            border:2px;
+            color:white;
+            padding:8px 16px;
+            cursor:pointer;
+            margin-top:15px;
+            border-radius:10px;
+            }
+        .component {
+                color : navy;
+                height: 30px;
+                border-radius: 10px;
+                width: 225px;
+        }
+    </style>
+</head>
+<body>
+
+    <div align="center" class="main">
+        <hi>DIABETES PREDICTION </hi>
+        <br>
+        <br>
+        <form action="result">
+            <table>
+                <tr>
+                    <td align="right" class = 'component'>Name</td>
+                    <td align="left"><input class = 'component' type="text"  placeholder="ABC" required></td>
+                </tr>
+                <tr>
+                    <td align="right" class = 'component'>Pregnancies</td>
+                    <td align="left"><input class = 'component' type="number"  max="10" min="0" name = "n1" placeholder="0-10" required></td>
+                </tr>
+
+                <tr>
+                    <td align="right" class = 'component'>Glucose</td>
+                    <td align="left"><input class = 'component'  type="number" name = "n2" min = "70" max = "200" placeholder="70-200mg/dL" required></td>
+                </tr>
+
+                <tr>
+                    <td align="right" class = 'component'>BloodPressure</td>
+                    <td align="left"><input  class = 'component' type="number" min="60" max="180" name = "n3" placeholder="60-180mm Hg" required></td>
+                </tr>
+                <tr>
+                    <td align="right" class = 'component'>Skin Thickness</td>
+                    <td align="left"><input class = 'component'  type="number" name = "n4" min="0"  max ="50" placeholder="0 -50 mm" required></td>
+                </tr>
+                <tr>
+                    <td align="right" class = 'component'>Insulin</td>
+                    <td align="left"><input class = 'component'  type="number" name = "n5" min="0"  max ="300"  placeholder="pmol/L" required></td>
+                </tr>
+                <tr>
+                    <td align="right" class = 'component'>Body Mass Index</td>
+                    <td align="left"><input class = 'component' type="number" step="0.1" min="18.5"  max ="60.0"name = "n6" placeholder="18.5-60kg/m^2" required></td>
+                </tr>
+                <tr>
+                    <td align="right" class = 'component'>Diabetes Pedigree Function</td>
+                    <td align="left"><input class = 'component'  type="number" name = "n7" min="0"  max ="1" placeholder="0-1" required></td>
+                </tr>
+                <tr>
+                    <td align="right" class = 'component'>Age</td>
+                    <td align="left"><input class = 'component'  type="number"  min="1" max="120"  name = "n8" placeholder="0-120" required></td>
+                </tr>
+            </table>
+            <a href="../ " target="blank"><input type="button" value="Home" class="btn-home"/>
+            </a>
+            <input type="submit">
+        </form>
+
+    </div>
+</body>
+</html>
